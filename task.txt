@@ -1,0 +1,88 @@
+
+CREATE TABLE batches(
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ batchname VARCHAR(25),
+coursename VARCHAR(50),
+no_of_students INT,
+classmode VARCHAR(25),
+batchlanguage VARCHAR(20),
+mentorname VARCHAR(50));
+
+ INSERT INTO batches (batchname, coursename, no_of_students, classmode, batchlanguage, mentorname)
+ VALUES
+("fse100", "full Stack development", 20, "online", "english","hari haran"),
+("fse101", "full Stack development", 21, "online", "hindi","prem kumar"),
+("fse102", "full Stack development", 22, "online", "hindi","shakti"),
+("fse103", "full Stack development", 19, "online", "tamil","Bharat"),
+("fse104", "full Stack development", 15, "online", "telugu","shakti"),
+("fse105", "full Stack development", 20, "offline", "english","hari haran"),
+("ds100", "Data Science", 20, "online", "english", "RajaRow"),
+("ds101", "Data Science", 21, "online", "hindi", "Manoj"),
+("ds102", "Data Science", 22, "online", "hindi", "Satish"),
+("ds103", "Data Science", 19, "online", "tamil", "kiran"),
+("ds104", "Data Science", 15, "online", "telugu", "Adiaman"),
+("ds105", "Data Science", 20, "offline", "english","chakrawarty"),
+
+("uivx100", "UI UX DEV", 20, "online", "english","Moorty"),
+("uivx101", "UI UX DEV", 21, "online", "hindi","Soori"),
+("uivx102", "UI UX DEV", 22, "online", "hindi","Priya" ),
+("uivx103", "UI UX DEV", 19, "online", "tamil", "malvika"),
+("uivx104", "UI UX DEV", 15, "online", "telugu","Vimala"),
+("uivx105", "UI UX DEV", 20, "offline", "english","pavitra"),
+
+("devops00","development and operations", 20, "online", "english","yuvashree"),
+("uivx101", "development and operations", 21, "online", "hindi","Bindumati"),
+("uivx102", "development and operations", 22, "online", "hindi","Gopal"),
+("uivx103", "development and operations", 19, "online", "tamil","Rolex"),
+("uivx104", "development and operations", 15, "online", "telugu","ajith"),
+("uivx105", "development and operations", 20, "offline", "english","Rajni");
+
+ CREATE TABLE users(
+id INT AUTO_INCREMENT PRIMARY KEY,
+username VARCHAR(25),
+useremail VARCHAR(100),
+usermobile VARCHAR(10));
+
+INSERT INTO users (username, useremail, usermobile) VALUES  
+('charitra', 'charitra@gmail.com', 1234567890),
+('pavitra', 'pavitra@gmail.com', 9876897689),
+('Sujitha', 'Sujitha@gmail.com', 9898767656),
+('Adhiaman', 'Adhiaman@gmail.com', 9878654556),
+('Raman', 'Raman@gmail.com', 9876545345),
+('Vimala', 'Vimala@gmail.com', 9876534659),
+('Lakhman', 'Lakhman@gmail.com', 8765876545),
+('sita', 'sita@gmail.com', 9876464534),
+('ashish', 'ashish@gmail.com', 9875643454),
+('abhainandan', 'abhainandan@gmail.com', 9864536537),
+('bala', 'bala@gmail.com', 8767364536),
+('venkat', 'venkat@gmail.com', 9876478567);
+
+
+ CREATE TABLE tasks(
+id INT AUTO_INCREMENT PRIMARY KEY,
+username VARCHAR(25),
+taskalloted INT,
+taskcompletd INT,
+codekatascore INT,
+ webkatascore INT,
+ totalscore INT);
+
+INSERT INTO tasks (username, taskalloted, taskcompletd, codekatascore, webkatascore, totalscore) VALUES  
+('charitra', 50, 48, 1000, 500, 1800),
+('pavitra', 52, 25, 1200, 400, 1700),
+('Sujitha',  50, 48, 1000, 500, 1800),
+('Adhiaman',  50, 30, 1000, 500, 1800),
+('Raman',  50, 48, 1000, 500, 1800),
+('Vimala',  50, 42, 1000, 500, 1800),
+('Lakhman', 52, 45, 1200, 400, 1700),
+('sita', 50, 48, 1000, 500, 1800),
+('ashish',  50, 48, 1500, 500, 2000),
+('abhainandan',  50, 50, 1000, 500, 2500),
+('bala', 52, 45, 1200, 400, 1700),
+('venkat',  50, 48, 1000, 500, 1800);
+
+
+
+SELECT * FROM batches;
+SELECT * FROM users;
+SELECT * FROM tasks;
